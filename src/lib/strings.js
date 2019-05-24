@@ -24,7 +24,7 @@ const countCharacters = (string) => {
 //Works fine, but probably should be looking at using the string method string.charAt(0)
 
 const firstCharacter = (string) => {
-  return string[0];
+  return string.charAt[0];
 };
 
 //Good job!
