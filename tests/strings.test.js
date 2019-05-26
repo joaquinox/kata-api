@@ -50,7 +50,7 @@ describe('/strings', () => {
   });
 
   describe('GET /first-characters/{string}', () => {
-    xit('returns the first character of the string when there is no query string', (done) => {
+    it('returns the first character of the string when there is no query string', (done) => {
       chai.request(server)
         .get('/strings/first-characters/hello')
         .end((err, res) => {

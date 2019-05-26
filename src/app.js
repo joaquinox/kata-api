@@ -19,10 +19,10 @@ app.get('/strings/lower/:string', (req, res) => {
 });
 
 app.get('/strings/first-characters/:string', (req, res) => {
-  if (req.query.length === 0) {
+  if (!req.query.length) {
     return res.json({ result: firstCharacter(req.params.string) });
   }
-  res.json({ result: firstCharacters(req.params.string, req.query.length) });
+  return res.json({ result: firstCharacters(req.params.string, req.query.length) });
 });
 
 app.get('/numbers/add/:a/and/:b', (req, res) => {
